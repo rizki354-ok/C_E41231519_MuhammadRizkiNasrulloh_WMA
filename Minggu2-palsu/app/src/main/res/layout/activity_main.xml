@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Todo Master: Atur dan Selesaikan Tugasmu dengan Mudah!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/todoInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tambahkan tugas baru"
+        android:layout_margin="16dp"
+        android:layout_below="@id/headerTitle"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:inputType="text"
+        android:imeOptions="actionDone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/todoInput"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/completedTasksTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed Tasks"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/recyclerView"
+        android:layout_margin="16dp"
+        android:layout_marginTop="24dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/completedRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/completedTasksTitle"
+        android:layout_marginTop="8dp" />
+</RelativeLayout>
